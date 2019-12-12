@@ -9,18 +9,28 @@ public class BookCatalog implements DataStorage {
 	
 	private List<RecordInBookCatalog> accounting = new ArrayList<>();
 
-	@Override
-	public void add(Object obj) {
-		accounting.add((RecordInBookCatalog) obj);
+	public void add(RecordInBookCatalog recordInBookCatalog) {
+		accounting.add(recordInBookCatalog);
 	}
 
-	@Override
-	public void delete(Object obj) {
-		accounting.remove((RecordInBookCatalog) obj);
+	public void delete(RecordInBookCatalog recordInBookCatalog) {
+		accounting.remove(recordInBookCatalog);
 	}
 
 	public List<RecordInBookCatalog> getAccounting() {
 		return accounting;
+	}
+
+	@Override
+	public void add(Object obj) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delete(Object obj) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

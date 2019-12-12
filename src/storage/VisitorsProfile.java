@@ -8,21 +8,32 @@ import data.Visitor;
 public class VisitorsProfile implements DataStorage {
 
 	public List<Visitor> accounting = new ArrayList<>();
-	@Override
-	public void add(Object obj) {
-		accounting.add((Visitor) obj);
+	
+	public void addVisitor(Visitor visitor) {
+		accounting.add(visitor);
 	}
 
-	@Override
-	public void delete(Object obj) {
-		accounting.remove((Visitor) obj);
+	public void deleteVisitor(Visitor visitor) {
+		accounting.remove(visitor);
 	}
 	
-	public void change(Object obj) {
-		int i = accounting.indexOf((Visitor) obj);
+	public void change(Visitor visitor) {
+		int i = accounting.indexOf(visitor);
 	}
 
 	public List<Visitor> getAccounting() {
 		return accounting;
+	}
+
+	@Override
+	public void add(Object obj) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delete(Object obj) {
+		// TODO Auto-generated method stub
+		
 	}
 }
